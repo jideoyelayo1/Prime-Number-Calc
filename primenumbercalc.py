@@ -17,4 +17,4 @@ def primeNums(n):
 
 n = int(input("Enter n: "))
 print(primeNums(n))
-print("The number of prime numbers are: "+len(primeNums(n)))
+print("The number of prime numbers are: "+ str(len(primeNums(n))))
