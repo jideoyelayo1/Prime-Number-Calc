@@ -1,3 +1,4 @@
+import time
 def primeNums(n):
     nums = list(range(1,n))
     ans = []
@@ -14,7 +15,18 @@ def primeNums(n):
             i+=1
     return ans
 
-
 n = int(input("Enter n: "))
+
+
+
+start = time.time()
+primeNums(n)
+end = time.time()
+
+
+
 print(primeNums(n))
+
 print("The number of prime numbers are: "+ str(len(primeNums(n))))
+
+print(f"Runtime of the program is {(end - start)*1000} ms")
