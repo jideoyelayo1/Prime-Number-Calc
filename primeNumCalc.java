@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,11 +11,20 @@ public class Main {
         System.out.println("Enter n: ");
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
+
+        long startTime = System.currentTimeMillis();
+
         List<Integer> listOfNums = Range(1, n);
         List<Integer> listOfPrimes = primeNums(listOfNums);
+        long endTime = System.currentTimeMillis();
+
+        long timeElapsed = endTime - startTime;
+
+
         for(int i = 0; i < listOfPrimes.size();i++)
         System.out.println(listOfPrimes.get(i));;
         System.out.println("the Number of primes is: " + listOfPrimes.size() );
+        System.out.println("The time taken is: " + timeElapsed);
     }
     public static List<Integer> Range(int a, int b)
     {
