@@ -8,13 +8,25 @@ namespace ConsoleApplication2
     {
         public static void Main(string[] args)
         {
+            var watch = new System.Diagnostics.Stopwatch();
+
             Console.WriteLine("Enter n: ");
             int n = Convert.ToInt32(Console.ReadLine());
+            
+            
+            watch.Start();
             List<int> listOfNums = Range(1, n);
+            
             List<int> listOfPrimes = primeNums(listOfNums);
+            
+            watch.Stop();
+
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
             foreach (int i in listOfPrimes)
                 Console.WriteLine(i);
             Console.WriteLine("the Number of primes is: " + listOfPrimes.Count.ToString());
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
+
 
 
         }
