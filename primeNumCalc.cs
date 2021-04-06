@@ -4,8 +4,7 @@ using System.Linq;
 
 namespace ConsoleApplication2
 {
-    internal class Program
-    {
+    
         public static void Main(string[] args)
         {
             var watch = new System.Diagnostics.Stopwatch();
@@ -62,5 +61,5 @@ namespace ConsoleApplication2
 
             return ans;
         }
-    }
+    
 }
